@@ -92,5 +92,7 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'JagatAppService'
-          slot-name: 'Production'
-          
+          slot-name: 'Production' 
+      
+      - name: Running flask server
+        run: python3 .github/workflows/app.py
