@@ -26,6 +26,9 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
+      
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
       - name: Run a one-line script
         run: sudo apt-get update
@@ -33,26 +36,17 @@ jobs:
       - name: Run a second-line script
         run: sudo apt install python3-pip
         
-      - name: Run a third-line script
-        run:  sudo apt update && sudo apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
-        
       - name: Run a fourth-line script
         run: pip install pytesseract
-
-      - name: Run a oracle-line script
-        run: pip install cx_Oracle
         
       - name: Run a fifth-line script
         run: pip install -U opencv-python
+
+      - name: Run a third-line script
+        run:  sudo apt update && sudo apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
         
       - name: Run a sixth-line script
         run: sudo apt-get install tesseract-ocr
-
-      - name: Run a seventh-line script
-        run: pip install Flask
-      
-      - name: Install dependencies
-        run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
