@@ -27,8 +27,25 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: apt-get update
+      
+      - name: Run a one-line script
+        run: apt install python3-pip
+        
+      - name: Run a one-line script
+        run: apt update && apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
 
+      - name: Run a one-line script
+        run: pip3 install Flask
+        
+      - name: Run a one-line script
+        run: pip3 install pytesseract
+        
+      - name: Run a one-line script
+        run: pip3 install -U opencv-python
+        
+      - name: Run a one-line script
+        run: apt-get install tesseract-ocr
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
