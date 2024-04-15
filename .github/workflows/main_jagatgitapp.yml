@@ -89,7 +89,28 @@ jobs:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A6EE2DA4489C4DACBB19032B96333F78 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B9FA06AE95C048A59A7702EF15AD97A9 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_981868DE62484B51A8F0250D78E81A1F }}
+      
+      - name: Run a one-line script
+        run: sudo apt-get update
+      
+      - name: Run a second-line script
+        run: sudo apt install python3-pip
+        
+      - name: Run a third-line script
+        run:  sudo apt update && sudo apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
+        
+      - name: Run a fourth-line script
+        run: pip3 install pytesseract
+        
+      - name: Run a fifth-line script
+        run: pip3 install -U opencv-python
+        
+      - name: Run a sixth-line script
+        run: sudo apt-get install tesseract-ocr
 
+      - name: Run a seventh-line script
+        run: pip3 install Flask
+        
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
