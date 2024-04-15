@@ -1,4 +1,4 @@
 Flask
 cx_Oracle
 pytesseract
-opencv-contrib-python
+opencv-python-headless
