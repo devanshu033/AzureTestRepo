@@ -93,6 +93,7 @@ jobs:
         with:
           app-name: 'JagatAppService'
           slot-name: 'Production' 
+          package: '.'
       
       - name : List file available in this deploy
         run : ls 
