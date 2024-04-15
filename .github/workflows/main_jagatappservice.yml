@@ -47,9 +47,6 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r .github/workflows/requirements.txt
-
-      - name: Run python
-        run: python3 .github/workflows/app.py
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
