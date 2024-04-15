@@ -1,5 +1,5 @@
 from flask import Flask
-import cv2
+import cx_Oracle
 
 app = Flask(__name__)
 

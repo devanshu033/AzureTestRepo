@@ -38,6 +38,9 @@ jobs:
         
       - name: Run a fourth-line script
         run: pip3 install pytesseract
+
+      - name: Run a oracle-line script
+        run: pip3 install cx_Oracle
         
       - name: Run a fifth-line script
         run: pip3 install -U opencv-python
