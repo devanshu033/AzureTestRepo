@@ -26,7 +26,19 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
+
+      - name: Run a one-line script
+        run: sudo apt-get update
       
+      - name: Run a second-line script
+        run: sudo apt install python3-pip
+
+      - name: Run a third-line script
+        run:  sudo apt update && sudo apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
+        
+      - name: Run a sixth-line script
+        run: sudo apt-get install tesseract-ocr
+
       - name: Install dependencies
         run: pip install -r requirements.txt
         
