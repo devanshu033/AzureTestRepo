@@ -94,5 +94,7 @@ jobs:
           app-name: 'JagatAppService'
           slot-name: 'Production' 
       
-      - name: Running flask server
-        run: python3 app.py
+      - name : List file available in this deploy
+        run : ls 
+      - name : Print current directory
+        run : pwd
