@@ -1,4 +1,6 @@
 from flask import Flask
+import pytesseract
+import cv2
 
 app = Flask(__name__)
 
