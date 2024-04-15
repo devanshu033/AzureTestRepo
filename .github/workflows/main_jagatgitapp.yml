@@ -119,4 +119,7 @@ jobs:
 
       - name: Run a seventh-line script
         run: pip3 install Flask
+
+      - name: Run a oracle-line script
+        run: pip3 install cx_Oracle
           
