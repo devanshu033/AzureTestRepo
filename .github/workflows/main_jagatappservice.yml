@@ -34,7 +34,7 @@ jobs:
         run: sudo apt install python3-pip
         
       - name: Run a one-line script
-        run:  apt update && apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
+        run:  sudo apt update && sudo apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
         
       - name: Run a one-line script
         run: pip3 install pytesseract
