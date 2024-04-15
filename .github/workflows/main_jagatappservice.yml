@@ -28,13 +28,13 @@ jobs:
           source venv/bin/activate
       
       - name: Run a one-line script
-        run: apt-get update
+        run: sudo apt-get update
       
       - name: Run a one-line script
-        run: apt install python3-pip
+        run: sudo apt install python3-pip
         
       - name: Run a one-line script
-        run: apt update && apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
+        run:  apt update && apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
         
       - name: Run a one-line script
         run: pip3 install pytesseract
@@ -43,7 +43,7 @@ jobs:
         run: pip3 install -U opencv-python
         
       - name: Run a one-line script
-        run: apt-get install tesseract-ocr
+        run: sudo apt-get install tesseract-ocr
 
       - name: Install dependencies
         run: pip install -r requirements.txt
