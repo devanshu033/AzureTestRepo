@@ -1,2 +1,4 @@
 Flask
 cx_Oracle
+pytesseract
+opencv-python
