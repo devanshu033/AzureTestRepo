@@ -37,14 +37,14 @@ jobs:
         run:  sudo apt update && sudo apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
         
       - name: Run a third-line script
-        run:  sudo apt install -y libgl1-mesa-glx
+        run:  sudo apt-get install libgl1
 
       - name: Run a sixth-line script
         run: sudo apt-get install tesseract-ocr
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-        
+
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
