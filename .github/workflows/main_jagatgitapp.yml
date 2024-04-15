@@ -37,19 +37,19 @@ jobs:
         run:  sudo apt update && sudo apt install -y libsm6 libxext6 ffmpeg libfontconfig1 libxrender1 libgl1-mesa-glx
         
       - name: Run a fourth-line script
-        run: pip3 install pytesseract
+        run: pip install pytesseract
 
       - name: Run a oracle-line script
-        run: pip3 install cx_Oracle
+        run: pip install cx_Oracle
         
       - name: Run a fifth-line script
-        run: pip3 install -U opencv-python
+        run: pip install -U opencv-python
         
       - name: Run a sixth-line script
         run: sudo apt-get install tesseract-ocr
 
       - name: Run a seventh-line script
-        run: pip3 install Flask
+        run: pip install Flask
       
       - name: Install dependencies
         run: pip install -r requirements.txt

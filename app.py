@@ -1,5 +1,7 @@
 from flask import Flask
 import cx_Oracle
+import pytesseract
+import cv2
 
 app = Flask(__name__)
 
