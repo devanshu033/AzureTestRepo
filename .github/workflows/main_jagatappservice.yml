@@ -95,4 +95,4 @@ jobs:
           slot-name: 'Production' 
       
       - name: Running flask server
-        run: python3 .github/workflows/app.py
+        run: python3 app.py
