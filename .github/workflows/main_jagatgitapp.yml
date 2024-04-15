@@ -82,7 +82,6 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      
       - name: Login to Azure
         uses: azure/login@v1
         with:
@@ -90,6 +89,13 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B9FA06AE95C048A59A7702EF15AD97A9 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_981868DE62484B51A8F0250D78E81A1F }}
       
+      - name: 'Deploy to Azure Web App'
+        uses: azure/webapps-deploy@v2
+        id: deploy-to-webapp
+        with:
+          app-name: 'JagatGitApp'
+          slot-name: 'Production'
+
       - name: Run a one-line script
         run: sudo apt-get update
       
@@ -110,11 +116,4 @@ jobs:
 
       - name: Run a seventh-line script
         run: pip3 install Flask
-        
-      - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v2
-        id: deploy-to-webapp
-        with:
-          app-name: 'JagatGitApp'
-          slot-name: 'Production'
           
