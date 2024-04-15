@@ -93,19 +93,8 @@ jobs:
         with:
           app-name: 'JagatAppService'
           slot-name: 'Production' 
-
-      - task: AzureWebApp@1
-        inputs:
-          package: '$(Build.ArtifactStagingDirectory)'
-          startUpCommand: 'python3 app.py'
       
       - name : List file available in this deploy
-        run : ls 
+        run : find / -type f -name "app.py"
       - name : Print current directory
         run : pwd
-
-  steps:  
-    - task: AzureWebApp@1
-      inputs:
-        package: '$(Build.ArtifactStagingDirectory)/app.py'
-        startUpCommand: 'python3 app.py'
