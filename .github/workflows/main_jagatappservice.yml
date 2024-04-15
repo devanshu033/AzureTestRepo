@@ -47,6 +47,9 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r .github/workflows/requirements.txt
+
+      - name: Run python
+        run: python3 .github/workflows/app.py
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -93,8 +96,3 @@ jobs:
         with:
           app-name: 'JagatAppService'
           slot-name: 'Production' 
-      
-      - name : List file available in this deploy
-        run : find / -type f -name "app.py"
-      - name : Print current directory
-        run : pwd
